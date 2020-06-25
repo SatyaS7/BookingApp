@@ -1,0 +1,6 @@
+com\roomservices\availability\service\AvailabilityService.class
+com\roomservices\availability\web\AvailabilityApplication.class
+com\roomservices\availability\dto\AvailabilityDto.class
+com\roomservices\availability\dto\AvailabilityStatus.class
+com\roomservices\availability\service\impl\AvailabilityServiceImpl.class
+com\roomservices\availability\controller\AvailabilityController.class

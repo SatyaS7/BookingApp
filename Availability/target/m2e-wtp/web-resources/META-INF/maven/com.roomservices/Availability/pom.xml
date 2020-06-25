@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.roomservices</groupId>
+    <artifactId>roomservice</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>Availability</artifactId>
+  <packaging>war</packaging>
+   <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>reservation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <!-- <classifier>classes</classifier> -->
+<!--             <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-config</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-web</artifactId>
+                </exclusion>
+            </exclusions> -->
+        </dependency>
+       </dependencies>
+</project>

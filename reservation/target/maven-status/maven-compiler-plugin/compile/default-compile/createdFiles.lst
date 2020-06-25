@@ -1,0 +1,8 @@
+com\roomservices\reservation\web\ReservationApplication.class
+com\roomservices\reservation\controller\ReservationController.class
+com\roomservices\reservation\dto\BookingRequestDTO.class
+com\roomservices\reservation\dao\ReservationRepository.class
+com\roomservices\reservation\service\impl\ReservationServiceImpl.class
+com\roomservices\reservation\service\ReservationService.class
+com\roomservices\reservation\dto\CreditCardDetailsDTO.class
+com\roomservices\reservation\model\Reservations.class
