@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>listing</artifactId>
+            <artifactId>Listing</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

@@ -3,7 +3,9 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
-import java.util.Date;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity//(name = "reservations")
 //@javax.persistence.Table(name = "reservations")
@@ -17,14 +19,16 @@ public class Reservations {
     private Long categoryId;
     @Column(name = "room_id", nullable = false)
     private Long roomId;
-    private Date from;
-    private Date until;
+    @Column(name = "_from", nullable = false) // "from" is an SQL keyword
+    private LocalDate from;
+    @Column(name = "until", nullable = false)
+    private LocalDate until;
     private String customerName;
-    private Date createdAt;
-    private Date updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Reservations() {
-        createdAt = new Date();
+        createdAt = LocalDateTime.now();
         updatedAt = createdAt;
     }
 
@@ -52,23 +56,21 @@ public class Reservations {
         this.roomId = roomId;
     }
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "_from", nullable = false) // "from" is an SQL keyword
-    public Date getFrom() {
+    //@Temporal(TemporalType.DATE)
+    
+    public LocalDate getFrom() {
         return from;
     }
 
-    public void setFrom(Date from) {
+    public void setFrom(LocalDate from) {
         this.from = from;
     }
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "until", nullable = false)
-    public Date getUntil() {
+    public LocalDate getUntil() {
         return until;
     }
 
-    public void setUntil(Date until) {
+    public void setUntil(LocalDate until) {
         this.until = until;
     }
 
@@ -82,20 +84,20 @@ public class Reservations {
     }
 
     @Column(name = "created_at", nullable = false)
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
     @Column(name = "updated_at", nullable = false)
-    public Date getUpdatedAt() {
+    public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
+    public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
 

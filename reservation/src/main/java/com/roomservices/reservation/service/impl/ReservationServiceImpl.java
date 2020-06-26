@@ -2,6 +2,8 @@ package com.roomservices.reservation.service.impl;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
@@ -34,18 +36,13 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setRoomId(room.getId());
         reservation.setCategoryId(room.getRoomCategory().getId()); //Getting Category from Room
         
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-        try {
-	        Date fromDate = formatter.parse(request.getDateRange().getFrom());
-	        Date untilDate = formatter.parse(request.getDateRange().getUntil());
-	        
-	        reservation.setFrom(fromDate);
-	        reservation.setUntil(untilDate);
-        } 
-        catch (ParseException e) {
-        	e.printStackTrace();
-        }
+        LocalDate fromDate = LocalDate.parse(request.getDateRange().getFrom(), formatter);
+		LocalDate untilDate = LocalDate.parse(request.getDateRange().getUntil(), formatter);
+		
+		reservation.setFrom(fromDate);
+		reservation.setUntil(untilDate);
         
         reservation.setCustomerName(request.getCustomerName());
         
