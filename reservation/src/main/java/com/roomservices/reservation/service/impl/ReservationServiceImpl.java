@@ -91,6 +91,19 @@ public class ReservationServiceImpl implements ReservationService {
 		
     	return reservationRepository.findByDateAndCategory(fromDate, untilDate, category.getId());
     }
+    
+    public List<Reservations> getReservations(DateRange dateRange, Room room) {	
+    	//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    	
+    	String fromDate = null;
+    	String untilDate = null;
+    	
+        fromDate = dateRange.getFrom().format(formatter);
+		untilDate = dateRange.getUntil().format(formatter);
+		
+    	return reservationRepository.findByDateAndCategory(fromDate, untilDate, room.getId());
+    }
 
     /*public Reservation getLastUpdatedBooking(DateRange dateRange) {
         List<Reservation> bookings = sessionFactory.getCurrentSession()

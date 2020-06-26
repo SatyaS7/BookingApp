@@ -2,6 +2,7 @@ package com.roomservices.reservation.service;
 
 import java.util.List;
 
+import com.roomservices.listing.model.Room;
 import com.roomservices.listing.model.RoomCategory;
 import com.roomservices.reservation.dto.BookingRequestDTO;
 import com.roomservices.reservation.model.Reservations;
@@ -16,6 +17,8 @@ public interface ReservationService {
     public List<Reservations> getReservations(DateRange dateRange);
 
     public List<Reservations> getReservations(DateRange dateRange, RoomCategory roomCategory);
+    
+    public List<Reservations> getReservations(DateRange dateRange, Room room);
 
     public Reservations reservation(BookingRequestDTO request);
 

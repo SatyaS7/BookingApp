@@ -106,8 +106,8 @@ public class RoomServiceImpl implements IRoomService {
 	}
 
 	@Transactional(readOnly = true)
-	public List<Room> getAllRoomsWithCategory(RoomCategory category) {
-		return roomRepository.findByRoomCategoryId(category.getId());
+	public List<Room> getAllRoomsWithCategory(Long categoryId) {
+		return roomRepository.findByRoomCategoryId(categoryId);
 	}
 
 }

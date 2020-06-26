@@ -22,5 +22,5 @@ public interface IRoomService {
 
 		public Room updateRoom(Room room, long roomId);
 
-	    public List<Room> getAllRoomsWithCategory(RoomCategory category);
+	    public List<Room> getAllRoomsWithCategory(Long roomCategoryId);
 }
