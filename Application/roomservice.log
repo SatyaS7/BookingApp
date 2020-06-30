@@ -1,0 +1,37 @@
+2020-06-29 10:34:49.388  INFO 41304 --- [main] c.roomservices.application.Application   : Starting Application on DESKTOP-35T66Q2 with PID 41304 (D:\workspace3\roomservice\Application\target\classes started by san7_ in D:\workspace3\roomservice\Application)
+2020-06-29 10:34:49.391 DEBUG 41304 --- [main] c.roomservices.application.Application   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-29 10:34:49.391  INFO 41304 --- [main] c.roomservices.application.Application   : No active profile set, falling back to default profiles: default
+2020-06-29 10:34:49.816  INFO 41304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-29 10:34:49.884  INFO 41304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 3 JPA repository interfaces.
+2020-06-29 10:34:50.611  INFO 41304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-29 10:34:50.619  INFO 41304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:34:50.620  INFO 41304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-29 10:34:50.697  INFO 41304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:34:50.697  INFO 41304 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1260 ms
+2020-06-29 10:34:50.882  INFO 41304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-29 10:34:50.952  INFO 41304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-29 10:34:51.106  INFO 41304 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-29 10:34:51.205  INFO 41304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-29 10:34:51.773  INFO 41304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-29 10:34:51.789  INFO 41304 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-06-29 10:34:52.604  INFO 41304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-29 10:34:52.610  INFO 41304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-29 10:34:53.193  WARN 41304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-29 10:34:53.347  INFO 41304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:34:53.693  INFO 41304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-29 10:34:53.694  INFO 41304 --- [main] c.roomservices.application.Application   : Started Application in 4.634 seconds (JVM running for 5.019)
+2020-06-29 10:34:59.134  INFO 41304 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-29 10:34:59.135  INFO 41304 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-29 10:34:59.143  INFO 41304 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-29 10:34:59.382  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-06-26
+2020-06-29 10:34:59.440  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : [Reservations[id=2,categoryId=3,roomId=2,from=2020-06-25,until=2020-06-30,customerName=satya,createdAt=2020-06-25T14:45:28,updatedAt=2020-06-25T14:45:28]]
+2020-06-29 10:34:59.441  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-06-27
+2020-06-29 10:34:59.445  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : [Reservations[id=2,categoryId=3,roomId=2,from=2020-06-25,until=2020-06-30,customerName=satya,createdAt=2020-06-25T14:45:28,updatedAt=2020-06-25T14:45:28]]
+2020-06-29 10:34:59.445  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-06-28
+2020-06-29 10:34:59.448  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : [Reservations[id=2,categoryId=3,roomId=2,from=2020-06-25,until=2020-06-30,customerName=satya,createdAt=2020-06-25T14:45:28,updatedAt=2020-06-25T14:45:28]]
+2020-06-29 10:34:59.448  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-06-29
+2020-06-29 10:34:59.452  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : [Reservations[id=2,categoryId=3,roomId=2,from=2020-06-25,until=2020-06-30,customerName=satya,createdAt=2020-06-25T14:45:28,updatedAt=2020-06-25T14:45:28]]
+2020-06-29 10:34:59.452  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-06-30
+2020-06-29 10:34:59.457  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : [Reservations[id=2,categoryId=3,roomId=2,from=2020-06-25,until=2020-06-30,customerName=satya,createdAt=2020-06-25T14:45:28,updatedAt=2020-06-25T14:45:28]]
+2020-06-29 10:34:59.457  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : 2020-07-01
+2020-06-29 10:34:59.460  INFO 41304 --- [http-nio-8080-exec-2] c.r.a.s.impl.AvailabilityServiceImpl     : []
