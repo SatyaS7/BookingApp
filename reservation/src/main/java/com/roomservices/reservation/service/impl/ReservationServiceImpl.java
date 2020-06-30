@@ -88,8 +88,11 @@ public class ReservationServiceImpl implements ReservationService {
 
         fromDate = formatter.format(dateRange.getFrom());
 		untilDate = formatter.format(dateRange.getUntil());
+		System.out.println("In get reservation" + fromDate);
 		
-    	return reservationRepository.findByDateAndCategory(fromDate, untilDate, category.getId());
+		//System.out.println(fromDate);
+		
+    	return reservationRepository.findByDateAndCategory(fromDate, category.getId());
     }
     
     public List<Reservations> getReservations(DateRange dateRange, Room room) {	
@@ -102,7 +105,7 @@ public class ReservationServiceImpl implements ReservationService {
         fromDate = dateRange.getFrom().format(formatter);
 		untilDate = dateRange.getUntil().format(formatter);
 		
-    	return reservationRepository.findByDateAndCategory(fromDate, untilDate, room.getId());
+    	return reservationRepository.findByDateAndRoom(fromDate, room.getId());
     }
 
     /*public Reservation getLastUpdatedBooking(DateRange dateRange) {
