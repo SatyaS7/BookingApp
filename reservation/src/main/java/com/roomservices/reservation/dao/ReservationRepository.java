@@ -15,9 +15,10 @@ public interface ReservationRepository extends JpaRepository<Reservations, Long>
 	@Query(value = "SELECT * FROM reservations r where r._from > ?1 and r.until < ?2", nativeQuery = true)
 	public List<Reservations> findByDates(String from, String until);
 	
-	@Query(value = "SELECT * FROM reservations r where r._from = ?1 and r.until = ?2 and r.category_id = ?3", nativeQuery = true)
-	public List<Reservations> findByDateAndCategory(String from, String until, Long categoryId);
+	//@Query(value = "SELECT * FROM reservations r where r._from > ?1 and r.until < ?2 and r.category_id = ?3", nativeQuery = true)
+	@Query(value = "SELECT * FROM reservations r where ?1 between r._from and r.until and r.category_id = ?2", nativeQuery = true)
+	public List<Reservations> findByDateAndCategory(String from, Long categoryId);
 	
-	@Query(value = "SELECT * FROM reservations r where r._from = ?1 and r.until = ?2 and r.room_id = ?3", nativeQuery = true)
-	public List<Reservations> findByDateAndRoom(String from, String until, Long roomId);
+	@Query(value = "SELECT * FROM reservations r where ?1 between r._from and r.until and r.room_id = ?2", nativeQuery = true)
+	public List<Reservations> findByDateAndRoom(String from, Long roomId);
 }
