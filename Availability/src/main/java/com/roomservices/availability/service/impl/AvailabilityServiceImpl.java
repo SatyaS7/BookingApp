@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.annotations.common.util.impl.LoggerFactory;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +19,6 @@ import com.roomservices.shared.web.DateRange;
 @Service
 public class AvailabilityServiceImpl implements AvailabilityService {
 
-	private final Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
-	
 	@Autowired
 	private IRoomService roomService;
 
@@ -39,13 +35,12 @@ public class AvailabilityServiceImpl implements AvailabilityService {
 			availableDates = new ArrayList<LocalDate>();
 			LocalDate newStartDate = startDate;
 			
-			while(newStartDate.isBefore(endDate) || newStartDate.isEqual(endDate)) {				
+			while(newStartDate.isBefore(endDate)) {				
 				DateRange dateRange = new DateRange();
 				dateRange.setFrom(newStartDate);
 				dateRange.setUntil(newStartDate.plusDays(1));
-				logger.info(newStartDate.toString());
+			
 				List<Reservations> reservations = reservationService.getReservations(dateRange, room);
-				logger.info(reservations.toString());
 				if (reservations == null || reservations.isEmpty()) {
 					System.out.println(reservations.toString());
 					availableDates.add(newStartDate);
